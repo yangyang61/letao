@@ -19,15 +19,22 @@ body {
   font-size: .14rem;
   line-height: .14rem;
 }
-/* 头部公共样式 */
 #header {
-  display: flex;
   background-color: #006699;
+  display: flex;
   height: .45rem;
 }
 #header .left {
   width: .45rem;
   height: .45rem;
+}
+#header .left a {
+  color: #fff;
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #header .center {
   flex: 1;
@@ -35,11 +42,21 @@ body {
 #header .center h4 {
   color: #fff;
   font-weight: normal;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+#header .center form {
+  padding-top: .05rem;
+}
+#header .center form input {
+  background-color: #fff;
+  height: 35px;
+  text-align: left;
+  font-size: .14rem;
+  margin-bottom: 0;
 }
 #header .right {
   width: .45rem;
@@ -52,13 +69,15 @@ body {
 #header .right a {
   color: #fff;
 }
-/* 主题公共样式 */
 #main {
   flex: 1;
   overflow: hidden;
-  position: relative;
 }
-/* 底部公共样式 */
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+/* 底部公共的样式 */
 #footer {
   background-color: #006699;
   height: .45rem;
@@ -70,6 +89,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#footer .mui-row > div a.active {
+  color: orange;
 }
 #footer .mui-row > div a i,
 #footer .mui-row > div a span {

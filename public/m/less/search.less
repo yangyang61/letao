@@ -1,0 +1,75 @@
+@import 'base.less';
+
+#main{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    .search-form{
+        height: .54rem;
+        padding: .1rem;
+        display: flex;
+        input{
+            flex: 1;
+            height: .34rem;
+            background-color: #fff;
+            border: 1px solid @main-color;
+            text-align: left;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+            margin-bottom: 0;
+        }
+        button{
+            width: .6rem;
+            height: .34rem;
+            border-color: @main-color;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: @main-color;
+            color: #fff;
+        }
+    }
+
+    /* 搜索历史样式 */
+    .search-history{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+
+        .mui-card-header{
+            height: .44rem;
+            border: 1px solid #eee;
+            border-bottom: 0;
+            border-top-left-radius: .06rem;
+            border-top-right-radius: .06rem;
+        }
+
+        .mui-card-content{
+            flex: 1;
+        }
+        .mui-table-view-cell{
+            padding: .15rem;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-radius: 0;
+
+            &:last-of-type{
+                border-bottom: 1px solid #eee;
+                border-bottom-left-radius: .06rem;
+                border-bottom-right-radius: .06rem;
+            }
+
+            .mui-badge{
+                width: .24rem;
+                height: .24rem;
+                line-height: .18rem;
+            }
+        }
+
+
+        .mui-table-view-cell::after{
+            left: 0;
+        }
+    }
+}

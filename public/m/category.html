@@ -38,53 +38,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <!--这里放置真实显示的DOM内容-->
-                    <ul class="mui-table-view">
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                        <li class="mui-table-view-cell">运动馆</li>
-                    </ul>
+                    <ul class="mui-table-view"></ul>
                 </div>
             </div>
 
@@ -270,10 +224,36 @@
             </div>
         </div>
     </footer>
+
+    <!-- 引入zepto库 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
     <!-- 1. MUI和bootstrap一样 还有JS功能 引入mui.js  但是mui不依赖jquery-->
     <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入模板引擎的js artTemplate -->
+    <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 2. 引入首页自己的js文件 -->
     <script src="./js/category.js"></script>
+    <!-- 左侧分类模板 -->
+    <script type="text/html" id="leftTpl">
+        {{each rows}}
+            <li class="mui-table-view-cell {{ $value.id == 1?'active':'' }}" data-id="{{$value.id}}">{{$value.categoryName}}</li>
+        {{/each}}
+    </script>
+    <!-- 右侧二级分类模板 -->
+    <script type="text/html" id="rightTpl">
+        {{ if rows.length > 0 }}
+            {{ each rows}}
+                <div class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="{{$value.brandLogo}}" alt="">
+                        <p>{{$value.brandName}}</p>
+                    </a>
+                </div>
+            {{ /each }}
+        {{ else }}
+                什么都没有喔~~~
+        {{ /if }}
+    </script>
 </body>
 
 </html>
