@@ -4,31 +4,6 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    .search-form{
-        height: .54rem;
-        padding: .1rem;
-        display: flex;
-        input{
-            flex: 1;
-            height: .34rem;
-            background-color: #fff;
-            border: 1px solid @main-color;
-            text-align: left;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-right: 0;
-            margin-bottom: 0;
-        }
-        button{
-            width: .6rem;
-            height: .34rem;
-            border-color: @main-color;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            background-color: @main-color;
-            color: #fff;
-        }
-    }
 
     /* 搜索历史样式 */
     .search-history{
@@ -53,6 +28,8 @@
             border-left: 1px solid #eee;
             border-right: 1px solid #eee;
             border-radius: 0;
+            // white-space: nowrap;
+            // overflow: hidden;
 
             &:last-of-type{
                 border-bottom: 1px solid #eee;

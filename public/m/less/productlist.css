@@ -123,44 +123,41 @@ body {
 #footer .mui-row > div a span {
   display: block;
 }
-#main {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  /* 搜索历史样式 */
+#main .product-list .mui-card-header a {
+  color: #666;
+  font-size: .14rem;
 }
-#main .search-history {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  box-shadow: none;
+#main .product-list .mui-card-header a.active {
+  color: #f00;
 }
-#main .search-history .mui-card-header {
-  height: .44rem;
-  border: 1px solid #eee;
-  border-bottom: 0;
-  border-top-left-radius: .06rem;
-  border-top-right-radius: .06rem;
+#main .product-list .mui-card-content .mui-row > div:nth-child(odd) {
+  padding-right: .05rem;
 }
-#main .search-history .mui-card-content {
-  flex: 1;
+#main .product-list .mui-card-content .mui-row > div:nth-child(even) {
+  padding-left: .05rem;
 }
-#main .search-history .mui-table-view-cell {
-  padding: .15rem;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  border-radius: 0;
+#main .product-list .mui-card-content .mui-row > div .product {
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-top: .1rem;
+  padding-bottom: .1rem;
 }
-#main .search-history .mui-table-view-cell:last-of-type {
-  border-bottom: 1px solid #eee;
-  border-bottom-left-radius: .06rem;
-  border-bottom-right-radius: .06rem;
+#main .product-list .mui-card-content .mui-row > div .product .product-img {
+  width: 100%;
 }
-#main .search-history .mui-table-view-cell .mui-badge {
-  width: .24rem;
-  height: .24rem;
+#main .product-list .mui-card-content .mui-row > div .product .product-name {
   line-height: .18rem;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
-#main .search-history .mui-table-view-cell::after {
-  left: 0;
+#main .product-list .mui-card-content .mui-row > div .product .product-price span {
+  color: #f00;
+}
+#main .product-list .mui-card-content .mui-row > div .product .product-price del {
+  color: #CCC;
 }

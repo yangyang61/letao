@@ -1,0 +1,56 @@
+@import './base.less';
+
+#main{
+    .product-list{
+        .mui-card-header{
+            a{
+                color: #666;
+                font-size: .14rem;
+
+                &.active{
+                    color: #f00;
+                }
+            }
+        }
+
+        .mui-card-content{
+            .mui-row{
+                >div{
+                    &:nth-child(odd){
+                        padding-right: .05rem;
+                    }
+                    &:nth-child(even){
+                        padding-left: .05rem;
+                    }
+                    .product{
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        margin-top: .1rem;
+                        padding-bottom: .1rem;
+                        .product-img{
+                            width: 100%;
+                        }
+                        .product-name{
+                            line-height: .18rem;
+                            display: -webkit-box;
+                            overflow: hidden;
+                            white-space: normal !important;
+                            text-overflow: ellipsis;
+                            word-wrap: break-word;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                        .product-price{
+                            span{
+                                color: #f00;
+                            }
+                            del{
+                                color: #CCC;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
