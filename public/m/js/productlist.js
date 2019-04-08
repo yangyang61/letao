@@ -1,12 +1,12 @@
 $(function (){
 
-    var search;
+    var search,page;
 
     searchProduct();
     nowSearchProduct();
     sortProduct();
     pullProduct();
-
+    gettoDetail();
     //接受参数并搜索的函数
     function searchProduct(){
 
@@ -44,6 +44,9 @@ $(function (){
                 //console.log(html);
                 
                 $('.product-list .mui-row').html(html);
+
+                mui('#pullrefresh').pullRefresh().refresh(true);
+                page = 1;
             }
         });
     }
@@ -126,7 +129,7 @@ $(function (){
                 mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
             }, 1500);
         }
-        var page = 1;
+        page = 1;
         /**
          * 上拉加载具体业务实现
          */
@@ -159,6 +162,16 @@ $(function (){
         }
     }
 
+    //点击跳转到商品详情
+    function gettoDetail(){
+
+        $('.product-list').on('tap','.product-buy',function(){
+            var pId = $(this).data('id');
+
+            location = 'detail.html?id=' + pId;
+        });
+
+    }
 
     // 使用正则匹配url参数 返回这个匹配成功的值 根据参数名获取参数的值
     function getQueryString(name) {

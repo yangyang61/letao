@@ -1,0 +1,55 @@
+@import 'base.less';
+
+#main{
+    #slider{
+        img{
+            max-height: 3rem;
+        }
+    }
+    .product-detail{
+        .product-name{
+            line-height: .2rem;
+        }
+        .product-price{
+            span{
+                font-weight: 600;
+                color: #f00;
+            }
+            del{
+                color: #ccc;
+            }
+        }
+
+        .product-size{
+            line-height: .34rem;
+
+            .btn-size{
+                margin-bottom: .05rem;
+            }
+        }
+        .mui-table-view-cell:after{
+            left: 0;
+            background-color: #ccc;
+        }
+    }
+}
+
+#footer{
+    background-color: #ccc;
+    .mui-col-xs-2{
+        a{
+            font-size: .2rem;
+
+            &::before{
+                color: #333;
+            }
+        }
+    }
+
+    .mui-col-xs-5{
+        padding: .06rem;
+        button{
+            width: 100%;
+        }
+    }
+}
