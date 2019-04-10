@@ -72,7 +72,6 @@ body {
 #main {
   flex: 1;
   overflow: hidden;
-  position: relative;
   /* 搜索表单的公共样式 */
 }
 #main .mui-scroll-wrapper {
@@ -104,18 +103,6 @@ body {
   background-color: #006699;
   color: #fff;
 }
-#main .mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* 底部公共的样式 */
 #footer {
   background-color: #006699;
@@ -136,42 +123,19 @@ body {
 #footer .mui-row > div a span {
   display: block;
 }
-/* 设置分类页面的主体样式 */
-#main {
-  display: flex;
+#main form {
+  padding-right: .05rem;
 }
-#main .category-left {
-  width: .8rem;
-}
-#main .category-left .mui-table-view-cell {
-  padding: .15rem;
-}
-#main .category-left .mui-table-view-cell.active {
-  background-color: #eee;
-}
-#main .category-left .mui-table-view-cell:after {
-  left: 0;
-}
-#main .category-right {
-  flex: 1;
+#main .mui-button-row {
   padding: .1rem;
+  height: auto;
 }
-#main .category-right a {
-  display: block;
-  background-color: #fff;
-  margin-bottom: .1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#main .btn-get-vcode {
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: .4rem;
 }
-#main .category-right a img {
+#main .btn-register {
   width: 100%;
-  height: .9rem;
-}
-#main .category-right a p {
-  margin-bottom: 0;
-  line-height: .2rem;
-  height: .2rem;
-  overflow: hidden;
 }

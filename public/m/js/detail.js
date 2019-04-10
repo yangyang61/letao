@@ -90,15 +90,4 @@ $(function(){
         });
     }
 
-    // 使用正则匹配url参数 返回这个匹配成功的值 根据参数名获取参数的值
-    function getQueryString(name) {
-        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) {
-            // console.log(r);
-            // 别人之前使用unescape 方式解密  但是我们默认是encodeURI加密 使用 decodeURI 解密
-            return decodeURI(r[2]);
-        }
-        return null;
-    }
 });

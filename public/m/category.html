@@ -20,7 +20,7 @@
     <!-- 公共的头部区域 -->
     <header id="header">
         <div class="left">
-            <a href="index.html" class="fa fa-arrow-left"></a>
+            <a href="javascript:history.back(-1);" class="fa fa-arrow-left"></a>
         </div>
         <div class="center">
             <form action="#">
@@ -33,6 +33,9 @@
     </header>
     <!-- 主体内容 -->
     <main id="main">
+        <div class="mask">
+            <!-- <img src="./images/loading.gif" alt=""> -->
+        </div>
         <!-- 左侧分类 -->
         <div class="category-left">
             <div class="mui-scroll-wrapper">
@@ -231,6 +234,8 @@
     <script src="./lib/mui/js/mui.js"></script>
     <!-- 引入模板引擎的js artTemplate -->
     <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入公共的js文件 -->
+    <script src="./js/common.js"></script>
     <!-- 2. 引入首页自己的js文件 -->
     <script src="./js/category.js"></script>
     <!-- 左侧分类模板 -->
