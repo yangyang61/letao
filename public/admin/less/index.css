@@ -1,0 +1,85 @@
+#main {
+  display: flex;
+}
+#main .left {
+  width: 200px;
+  height: 100vh;
+  background-color: #87ceeb;
+}
+#main .left .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+#main .left .logo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-shadow: 0 0 2px 2px hotpink;
+}
+#main .left .logo p {
+  margin-top: 10px;
+}
+#main .left .list-group .list-group-item {
+  background-color: transparent;
+  border-color: transparent;
+}
+#main .left .list-group .list-group-item.active,
+#main .left .list-group .list-group-item:hover {
+  background-color: hotpink;
+  color: #fff;
+  border-color: hotpink;
+}
+#main .left .list-group #collapseExample .list-group-item {
+  padding-left: 30px;
+}
+#main .right {
+  flex: 1;
+  height: 100vh;
+  background-color: #ccc;
+}
+#main .right #header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#main .right #header a {
+  line-height: 30px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: hotpink;
+}
+#main .right #header a::before {
+  font-size: 20px;
+  vertical-align: middle;
+}
+#main .right #info {
+  background-color: #fff;
+  padding: 20px;
+}
+#main .right #info table thead tr th {
+  text-align: center;
+}
+#main .right #info table tbody tr th,
+#main .right #info table tbody tr td {
+  text-align: center;
+  line-height: 60px;
+}
+#main .right #info table tbody tr th img,
+#main .right #info table tbody tr td img {
+  width: 165px;
+  height: 85px;
+}
+/* 模态框样式 */
+.modal .input-group {
+  margin-top: 10px;
+}
+.modal .input-group img {
+  width: 180px;
+  height: 180px;
+}

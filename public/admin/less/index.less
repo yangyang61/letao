@@ -1,0 +1,111 @@
+#main{
+    display: flex;
+    
+    .left{
+        width: 200px;
+        height: 100vh;
+        background-color: #87ceeb;
+
+        .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+
+            img{
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                border: 10px solid #fff;
+                box-shadow: 0 0 2px 2px hotpink;
+            }
+            p{
+                margin-top: 10px;
+            }
+        }
+
+        .list-group{
+            .list-group-item{
+                background-color: transparent;
+                border-color: transparent;
+
+                &.active,&:hover{
+                    background-color: hotpink;
+                    color: #fff;
+                    border-color: hotpink;
+                }
+            }
+
+            #collapseExample{
+                .list-group-item{
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
+    .right{
+        flex: 1;
+        height: 100vh;
+        background-color: #ccc;
+        #header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            a{
+                line-height: 30px;
+                vertical-align: middle;
+                text-decoration: none;
+                color: hotpink;
+
+                &::before{
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        #info{
+            background-color: #fff;
+            padding: 20px;
+
+            table{
+                thead{
+                    tr{
+                        th{
+                            text-align: center;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        th,td{
+                            text-align: center;
+                            line-height: 60px;
+
+                            img{
+                                width: 165px;
+                                height: 85px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 模态框样式 */
+.modal{
+    .input-group{
+        margin-top: 10px;
+        img{
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
